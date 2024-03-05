@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """
-Created on Mon Feb 19 13:39:10 2024
+Created on Mon Feb 10 13:39:10 2024
 
-@author: zolik
+@author: zoltan
 """
 
 import pygame #játékfejlesztéshez
