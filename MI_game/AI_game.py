@@ -18,7 +18,7 @@ WIN_HEIGHT = 800
 FPS = 60
 
 
-#score, generation, population
+#pontok, generációk, populációk
 score = 0
 generation = 0
 population = 0
