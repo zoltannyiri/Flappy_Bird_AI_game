@@ -7,7 +7,6 @@ Created on Mon Feb 10 13:39:10 2024
 
 import pygame #játékfejlesztéshez
 import neat #AI support
-import time #idő-és dátumkezelés
 import os #fájlműveletek
 import random
 
@@ -73,7 +72,7 @@ class Bird:
         
     
     
-    #mozgás; ekkor esik a madár lefelé, majd a 'jump' meghívása miatt felfelé megy
+    #mozgás; ekkor esik a madár lefelé, majd a 'jump' meghívása miatt ismét ugrik
     def move(self):
         self.tick_count += 1
         
@@ -243,8 +242,7 @@ def object_mover(win, birds, pipes, base, gen, nets):
         
         #az AI döntést hoz az adatok alapján
         data_to_evaluate = (bird.y, abs(bird.y - pipes[pipe_ind].height), abs(bird.y - pipes[pipe_ind].bottom))
-        
-        #döntés
+   
         result = nets[count].activate(data_to_evaluate)
         
         
@@ -385,7 +383,7 @@ def run(config_path):
 if __name__ == "__main__":
     
     local_dir = os.path.dirname((__file__))
-    config_path = os.path.join(local_dir, "config-feedforward.txt")
+    config_path = os.path.join(local_dir, "config-mi_beadando.txt")
     run(config_path)
     
     
